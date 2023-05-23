@@ -27,40 +27,34 @@
         <label for="" class="form-lable"
           >คณะ / สาขาที่ต้องการสมัคร <span class="text-danger">*</span></label
         >
-        <input
-          type="text"
-          class="form-control"
-          placeholder="เลือก"
-          name="date1"
-          required
-        />
+        <select id="inputState" class="form-select" required>
+          <option selected value="">เลือก...</option>
+          <option value="1">วิทยาศาสตร์คอมพิวเตอร์</option>
+          <option value="2">บริหารธุรกิจ</option>
+          <option value="3">ศิลปศาสตร์</option>
+        </select>
       </div>
     </div>
 
     <div class="row mb-4">
-      <div class="col-lg-3">
-        <label for="" class="form-lable"
-          >สัญชาติ <span class="text-danger">*</span></label
-        >
-        <input
-          type="text"
-          class="form-control"
-          placeholder="เลือก"
-          name="date2"
-          required
-        />
+      <div class="col-md-6">
+        <label for="inputState" class="form-label">สัญชาติ</label><span class="text-danger ms-2">*</span>
+        <select id="inputState" class="form-select" required>
+          <option selected value="">เลือก...</option>
+          <option value="1">ไทย</option>
+          <option value="2">จีน</option>
+          <option value="3">อังกฤษ</option>
+        </select>
       </div>
       <div class="col-lg-6">
         <label for="" class="form-lable"
           >เพศ <span class="text-danger">*</span></label
         >
-        <input
-          type="text"
-          class="form-control"
-          placeholder="เลือก"
-          name="date3"
-          required
-        />
+        <select id="inputState" class="form-select" required>
+          <option selected value="">เลือก...</option>
+          <option value="1">ชาย</option>
+          <option value="2">หญิง</option>
+        </select>
       </div>
     </div>
 
@@ -69,7 +63,11 @@
         <label for="" class="form-lable"
           >คำนำหน้าชื่อ <span class="text-danger">* (ชื่อเต็ม)</span></label
         >
-        <input type="text" class="form-control" name="fname" required />
+        <select id="inputState" class="form-select" required>
+          <option selected value="">เลือก...</option>
+          <option value="1">นาย</option>
+          <option value="2">นางสาว</option>
+        </select>
       </div>
       <div class="col-lg-3">
         <label for="" class="form-lable"
@@ -132,13 +130,11 @@
         <label for="" class="form-lable"
           >วุฒิการศึกษา <span class="text-danger">*</span></label
         >
-        <input
-          type="text"
-          class="form-control"
-          placeholder="เลือก"
-          name="date4"
-          required
-        />
+        <select id="inputState" class="form-select" required>
+          <option selected value="">เลือก...</option>
+          <option value="1">มัธยมศึกษา</option>
+          <option value="2">ปริญญาตรี</option>
+        </select>
       </div>
       <div class="col-lg-4">
         <label for="" class="form-lable"
@@ -150,13 +146,11 @@
         <label for="" class="form-lable"
           >จังหวัด <span class="text-danger">*</span></label
         >
-        <input
-          type="text"
-          class="form-control"
-          placeholder="เลือก"
-          name="date4"
-          required
-        />
+        <select id="inputState" class="form-select" required>
+          <option selected value="">เลือก...</option>
+          <option value="1">ปทุมธานี</option>
+          <option value="2">สระบุรี</option>
+        </select>
       </div>
     </div>
 
@@ -181,13 +175,11 @@
           >มีความต้องการกู้ยืมเพื่อการศึกษา
           <span class="text-danger">*</span></label
         >
-        <input
-          type="text"
-          class="form-control"
-          placeholder="เลือก"
-          name="date7"
-          required
-        />
+        <select id="inputState" class="form-select" required>
+          <option selected value="">เลือก...</option>
+          <option value="1">ต้องการ</option>
+          <option value="2">ไม่ต้องการ</option>
+        </select>
       </div>
     </div>
 
