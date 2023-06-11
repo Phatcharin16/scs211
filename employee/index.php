@@ -18,7 +18,7 @@ $data  = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 <head>
     <title>Dashboard</title>
-    <?php include('../layouts/employee-style.php'); ?>
+    <?php include('../layouts/employee-style.php');?>
 </head>
 
 <body>

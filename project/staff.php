@@ -1,3 +1,7 @@
+<?php
+$people_obj = json_decode(file_get_contents("https://raw.githubusercontent.com/arc6828/SCS211/main/week13/staff.json"), true);
+$people = $people_obj["people"];
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,16 +26,17 @@
 
      <!-- card 1 -->
      <div class="row row-cols-1 row-cols-md-4 g-4 text-center">
+     <?php foreach ($people as $row) { ?>
         <div class="col">
             <div class="card border-warning mb-3" style="max-width: 18rem;">
                 <img
                 class="img-thumbnail text-center"
-                style="width: 120px; height: 120px; border-radius: 130px; justify-content: center"
-                src="https://media.licdn.com/dms/image/C4E03AQFWhGnMvEGZwQ/profile-displayphoto-shrink_800_800/0/1643224841011?e=2147483647&v=beta&t=Q3uxEDQXqosgDJrLEBAcGVBuJDurxq_9Xj9AuTKD1O0"
+                style="text-align:center; width: 120px; height: 120px; border-radius: 130px"
+                src="<?= $row["image"] ?>"
               />
             <div class="card-body">
-                <h5 class="card-title">Mattie Smith</h5>
-              <div style="font-size: 15px; color: rgb(251, 129, 41)">Advanced Television & Digital Media</div>
+                <h5 class="card-title"><?= $row["name"] ?></h5>
+              <div style="font-size: 15px; color: rgb(251, 129, 41)"><?= $row["education"] ?></div>
               <div style="font-size: 15px; color: rgb(14, 12, 11)">Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam</div>
               <button class="btn btn-outline-info" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 18 18">
                 <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
@@ -46,7 +51,8 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <?php } ?>
+        <!-- <div class="col">
             <div class="card border-warning mb-3" style="max-width: 18rem;"> 
                 <img
                 class="img-thumbnail text-center"
@@ -213,7 +219,7 @@
               </svg></button>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

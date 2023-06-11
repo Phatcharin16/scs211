@@ -6,7 +6,6 @@
         width: 600px;
         margin: 0 auto;
     }
-
     table tr td:last-child {
         width: 120px;
     }
